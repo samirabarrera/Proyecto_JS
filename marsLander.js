@@ -17,21 +17,12 @@ while (true) {
     const P = parseInt(inputs[6]); // the thrust power (0 to 4).
 
     // Write an action using console.log()
-    // To debug: console.error('Debug messages...');
-    // Variables iniciales
-let x = initialX;  // posición inicial en x
-let y = initialY;  // posición inicial en y
-let vx = initialVx;  // velocidad inicial en x
-let vy = initialVy;  // velocidad inicial en y
-let fuel = initialFuel;  // combustible inicial disponible
-
-
-    // Leer la entrada (puedes usar readline para leer las entradas del juego)
+    // To debug: console.error('Debug messages...'); 
     const inputs = readline().split(' ');
     const terrainX = parseInt(inputs[0]);  // coordenada x del terreno
     const terrainY = parseInt(inputs[1]);  // coordenada y del terreno
     
-    // Hacer cálculos para decidir el ángulo y la potencia (aquí puedes colocar tu lógica)
+    // Hacer cálculos para decidir el ángulo y la potencia 
     const angle = calculateAngle(x, y, vx, vy);
     const power = calculatePower(x, y, vx, vy, fuel);
     
