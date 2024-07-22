@@ -10,29 +10,15 @@ while (true) {
     var inputs = readline().split(' ');
     const X = parseInt(inputs[0]);
     const Y = parseInt(inputs[1]);
-    const HS = parseInt(inputs[2]); // the horizontal speed (in m/s), can be negative.
-    const VS = parseInt(inputs[3]); // the vertical speed (in m/s), can be negative.
-    const F = parseInt(inputs[4]); // the quantity of remaining fuel in liters.
-    const R = parseInt(inputs[5]); // the rotation angle in degrees (-90 to 90).
-    const P = parseInt(inputs[6]); // the thrust power (0 to 4).
+    const highSpeed = parseInt(inputs[2]); // the horizontal speed (in m/s), can be negative.
+    const vSpeed = parseInt(inputs[3]); // the vertical speed (in m/s), can be negative.
+    const fuel = parseInt(inputs[4]); // the quantity of remaining fuel in liters.
+    const rotate = parseInt(inputs[5]); // the rotation angle in degrees (-90 to 90).
+    const power = parseInt(inputs[6]); // the thrust power (0 to 4).
 
-    // Write an action using console.log()
-    // To debug: console.error('Debug messages...'); 
-    const inputs = readline().split(' ');
-    const terrainX = parseInt(inputs[0]);  // coordenada x del terreno
-    const terrainY = parseInt(inputs[1]);  // coordenada y del terreno
-    
-    // Hacer cálculos para decidir el ángulo y la potencia 
-    const angle = calculateAngle(x, y, vx, vy);
-    const power = calculatePower(x, y, vx, vy, fuel);
-    
-    // Actualizar las variables de estado de la nave
-    x += vx;
-    y += vy;
-    vx += 0;  // aquí deberías incluir la lógica para la gravedad y la propulsión
-    vy += 0;  // aquí deberías incluir la lógica para la gravedad y la propulsión
-    fuel -= 0;  // aquí deberías descontar el combustible usado
-
-    // R P. R is the desired rotation angle. P is the desired thrust power.
-    console.log('-20 3');
+    if (vSpeed <= -40) {
+        print ('0 4');
+    } else if (vSpeed > -40) {
+        print ('0 0');
+    }
 }
