@@ -24,9 +24,9 @@ while (true) {
     // Write an action using console.log()
     // To debug: console.error('Debug messages...');
     if (vSpeed <= -40) {
-        console.log('0 4'); // thrust power 4 if vertical speed <= -40
+        console.log('0, 4'); // thrust power 4 if vertical speed <= -40
     } else {
-        console.log('0 0'); // otherwise thrust power 0
+        console.log('0, 0'); // otherwise thrust power 0
     }   
 
     // 2 integers: rotate power. rotate is the desired rotation angle (should be 0 for level 1), power is the desired thrust power (0 to 4).
