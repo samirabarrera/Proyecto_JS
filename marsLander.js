@@ -16,9 +16,15 @@ while (true) {
     const rotate = parseInt(inputs[5]); // the rotation angle in degrees (-90 to 90).
     const power = parseInt(inputs[6]); // the thrust power (0 to 4).
 
+    let thrustPower = 0;
+    let rotateAngle = 0;
+
+
     if (vSpeed <= -40) {
-        print ('0 4');
+        console.log ('0 4');
     } else if (vSpeed > -40) {
-        print ('0 0');
+        console.log ('0 0');
+    } else if () {
+        console.log
     }
 }
